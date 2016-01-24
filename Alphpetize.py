@@ -8,7 +8,7 @@ class AlphpetizeCommand(sublime_plugin.TextCommand):
 
 	newline_styles = {'unix': '\n', 'lf': '\n', 'windows': '\n', 'crlf': '\r\n', 'mac os 9': '\r', 'cr': '\r'}
 
-	def run(self, edit):
+	def run(self, edit, from_pre_save):
 		"""
 		Run plugin and collect classes in file
 		"""
@@ -44,8 +44,9 @@ class AlphpetizeCommand(sublime_plugin.TextCommand):
 					classes.append(sublime.Region(region.end(), end_line.begin()))
 					break
 
-		if not classes:
+		if not classes and not from_pre_save:
 			sublime.error_message('No classes/traits/interfaces found! (This might not be a PHP file!)')
+		if not classes:
 			return
 
 		offset = 0

@@ -1,6 +1,7 @@
 [
     {
         "caption": "Sort Methods",
-        "command": "alphpetize"
+        "command": "alphpetize",
+        "args": { "from_pre_save": 0 },
     }
 ]

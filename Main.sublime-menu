@@ -4,7 +4,11 @@
         "children":
         [
             {"id": "permute"},
-            { "command": "alphpetize", "caption": "Sort Methods" }
+            {
+                "command": "alphpetize",
+                "args": { "from_pre_save": 0 },
+                "caption": "Sort Methods",
+            }
         ]
     },
     {

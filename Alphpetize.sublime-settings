@@ -5,5 +5,8 @@
 
 	// Prioritize the following functions when sorting methods
 	// Functions with these names will be sorted to the top of their respective visibility group
-	"prioritize": []
+	"prioritize": [],
+
+	// If true, Alphpetize will run prior to saving .php files
+	"sort_on_save": false,
 }
